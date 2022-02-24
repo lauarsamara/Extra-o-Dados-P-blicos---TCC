@@ -1,0 +1,123 @@
+setwd("C:/Dados")
+
+#variáveis com os dados de estados e períodos
+estados = c('RO', 'AC', 'AM', 'RR', 'PA', 'AP', 'TO', 'MA', 'PI', 'CE', 'RN', 'PB', 'PE', 'AL', 'SE', 'BA', 'MG', 'ES', 'RJ', 'SP', 'PR', 'SC', 'RS', 'MS', 'MT', 'GO', 'DF', 'XX')
+
+
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202009, "/ben", 202009, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202009, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202009, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202009, "_", estado, ".zip", sep = ""))
+
+
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202010, "/ben", 202010, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202010, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202010, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202010, "_", estado, ".zip", sep = ""))
+
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202011, "/ben", 202011, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202011, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202011, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202011, "_", estado, ".zip", sep = ""))
+
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202012, "/ben", 202012, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202012, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202012, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202012, "_", estado, ".zip", sep = ""))
+
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202101, "/ben", 202101, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202101, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202101, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202101, "_", estado, ".zip", sep = ""))
+
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202102, "/ben", 202102, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202102, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202102, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202102, "_", estado, ".zip", sep = ""))
+}
+
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202103, "/ben", 202103, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202103, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202103, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202103, "_", estado, ".zip", sep = ""))
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202104, "/ben", 202104, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202104, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202104, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202104, "_", estado, ".zip", sep = ""))
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202105, "/ben", 202105, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202105, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202105, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202105, "_", estado, ".zip", sep = ""))
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202106, "/ben", 202106, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202106, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202106, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202106, "_", estado, ".zip", sep = ""))
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202107, "/ben", 202107, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202107, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202107, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202107, "_", estado, ".zip", sep = ""))
+}
+
+for (estado in estados){
+		download.file(url = paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_beneficiarios/", 202108, "/ben", 202108, "_", estado, ".zip", sep = ""),
+			destfile = paste("ben", 202108, "_", estado, ".zip", sep = ""))
+		
+		unzip(paste("ben", 202108, "_", estado, ".zip", sep = ""), exdir=".")
+		
+		unlink(paste("ben", 202108, "_", estado, ".zip", sep = ""))
+
+
+}
