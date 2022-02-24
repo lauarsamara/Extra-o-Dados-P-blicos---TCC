@@ -1,0 +1,48 @@
+library(lubridate)
+library(dplyr)
+
+rm(list = ls())
+
+ano = year(today() - dmonths(3))
+
+Fatos_NIPS = read.csv2(
+				paste("http://ftp.dadosabertos.ans.gov.br/FTP/PDA/demandas_dos_consumidores_nip/PDA_NIP_", ano, ".csv", sep = "")
+			)
+
+Fatos_NIPS = select(Fatos_NIPS,
+						CODIGO_OPERADORA,
+						NUMERO_DA_DEMANDA,
+						ABERTURA_DA_DEMANDA,
+						CLASSIFICACAO_DA_NIP,
+						NATUREZA_DA_NIP,
+						ASSUNTO,
+						DATA_DE_ATUALIZACAO)
+
+colnames(Fatos_NIPS) = c("Registro.ANS",
+							"Número.Demanda",
+							"Data.Atendimento",
+							"Classificação",
+							"Natureza.Demanda",
+							"Assunto.Demanda",
+							"Data.de.Atualização")
+
+assunto_da_demanda = unique(Fatos_NIPS$Assunto.Demanda)
+
+dados_demanda = data.frame(Assunto.Demanda = assunto_da_demanda, Subtema = assunto_da_demanda)
+
+for(i in 1:nrow(dados_demanda)){
+	Subtema_local = strsplit(dados_demanda$Subtema[i], split = ">>")
+	
+	if(is.na(Subtema_local[[1]][3])){
+		if(is.na(Subtema_local[[1]][2])) {
+			dados_demanda$Subtema[i] <- Subtema_local[[1]][1]
+		} else {
+			dados_demanda$Subtema[i] <- Subtema_local[[1]][2]
+		}
+	} else {
+		dados_demanda$Subtema[i] <- Subtema_local[[1]][3]
+	}
+}
+
+Fatos_NIPS = left_join(Fatos_NIPS, dados_demanda, by = "Assunto.Demanda")
+rm(dados_demanda, ano, assunto_da_demanda, i, Subtema_local)
